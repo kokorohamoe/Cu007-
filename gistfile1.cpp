@@ -11,6 +11,8 @@
        #include <unistd.h>
        #include <iostream>
        #include <stdio.h>
+
+
 #ifdef __CUDA_ARCH__ 
 __lobal__ 
 #end
