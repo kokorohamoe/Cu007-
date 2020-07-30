@@ -2,7 +2,7 @@
 //
 //
 
-__global__ kernel(int *v){
+__global__ cuda_kernel(int *v){
   *v = -1;
 }
 void main(void){
@@ -10,5 +10,5 @@ void main(void){
   int *cuda_mem;
   int N = sizeof(int);
   
-  kernel<<<1,1>>>(cuda_mem);
+  cuda_kernel<<<1,1>>>(cuda_mem);
 }
