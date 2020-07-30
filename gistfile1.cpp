@@ -23,8 +23,8 @@ main(void){
   int *cuda_mem;
   int N = sizeof(int);
  
-     cudaMalloc(&cuda_mem,N);//access mergin 2.2
-        cudaMemcpy (cuda_mem,&cpu_mem,N,cudaMemcpyHostToDevice);
+//     cudaMalloc(&cuda_mem,N);//access mergin 2.2
+//        cudaMemcpy (cuda_mem,&cpu_mem,N,cudaMemcpyHostToDevice);
 
   std::cout <<"num ="<<cpu_mem<<std::flush;
   cpu_mem = -771774;
