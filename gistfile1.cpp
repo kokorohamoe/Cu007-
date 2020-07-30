@@ -11,14 +11,14 @@
        #include <unistd.h>
        #include <iostream>
        #include <stdio.h>
-
-//__global__ 
+#if defined __CUDACC__
+__global__ 
+#end
 void cuda_kernel(int *v){
   *v = -1;
 }
 //void 
-int
-main(void){
+int main(void){
   int cpu_mem=-774;
   int *cuda_mem;
   int N = sizeof(int);
