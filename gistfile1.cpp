@@ -10,5 +10,9 @@ void main(void){
   int *cuda_mem;
   int N = sizeof(int);
   
+  std::cout <<"num ="<<cpu_mem<<std::flush;
+  cpu_mem = -774;
   cuda_kernel<<<1,1>>>(cuda_mem);
+ 
+  std::cout <<"cuda="<<cuda_mem<<std::endl;
 }
