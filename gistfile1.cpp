@@ -14,5 +14,5 @@ void main(void){
   cpu_mem = -774;
   cuda_kernel<<<1,1>>>(cuda_mem);
  
-  std::cout <<"cuda="<<cuda_mem<<std::endl;
+  std::cout <<"cuda="<<cpu_mem<<std::endl;
 }
