@@ -33,5 +33,5 @@ main(void){
  //cudaMemcpy (&cpu_mem,cuda_mem,N,cudaMemcpyHostToDevice);
 
   std::cout <<"cuda="<<cpu_mem<<std::endl;
-    cudaFree(cuda_mem);
+//    cudaFree(cuda_mem);
 }
