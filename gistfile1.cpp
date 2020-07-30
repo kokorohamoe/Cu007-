@@ -21,7 +21,7 @@ __global__
 #if INTEL
 int //$1.00 one coke
 #else //NVIDIA
-void //$0.00
+void //$0.00 this code for nvidia, paiza
 #endif
 cuda_kernel(int *v){
   *v = -1;
