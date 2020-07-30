@@ -2,7 +2,7 @@
 //
 //
 
-__global__ cuda_kernel(int *v){
+__global__ void cuda_kernel(int *v){
   *v = -1;
 }
 void main(void){
