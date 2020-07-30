@@ -16,8 +16,12 @@
 #ifdef __CUDA_ARCH__ 
 __global__ 
 #endif
-
-void cuda_kernel(int *v){
+#if INTEL
+int //$1.00
+#else
+void //$0.00
+#endif
+cuda_kernel(int *v){
   *v = -1;
 }
 //void 
