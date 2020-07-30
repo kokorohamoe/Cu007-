@@ -18,7 +18,7 @@ __global__
 #endif
 #if INTEL
 int //$1.00
-#else
+#else //NVIDIA
 void //$0.00
 #endif
 cuda_kernel(int *v){
