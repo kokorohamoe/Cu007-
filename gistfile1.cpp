@@ -27,7 +27,8 @@ void main(void){
   cpu_mem = -771774;
   cuda_kernel<<<1,1>>>(cuda_mem);
     cudaDeviceSynchronize();
- 
+ cudaMemcpy (&cpu_mem,cuda_mem,N,cudaMemcpyHostToDevice);
+
   std::cout <<"cuda="<<cpu_mem<<std::endl;
     cudaFree(cuda_mem);
 }
