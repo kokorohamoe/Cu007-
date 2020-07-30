@@ -44,5 +44,9 @@ int main(void){
  //cudaMemcpy (&cpu_mem,cuda_mem,N,cudaMemcpyHostToDevice);
 
   std::cout <<"cuda="<<cpu_mem<<std::endl;
-//    cudaFree(cuda_mem);
+#ifdef __CUDA_ARCH__ 
+    cudaMemcpy (cuda_mem,&cpu_mem,N,cudaMemcpyHostToDevice);
+    cudaFree(cuda_mem);
+#endif
+
 }
