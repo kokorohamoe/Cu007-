@@ -11,7 +11,7 @@
        #include <unistd.h>
        #include <iostream>
        #include <stdio.h>
-#if defined __CUDACC__
+#if defined __CUDA_ARCH__
 __global__ 
 #end
 void cuda_kernel(int *v){
