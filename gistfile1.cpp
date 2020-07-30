@@ -11,8 +11,8 @@
        #include <unistd.h>
        #include <iostream>
        #include <stdio.h>
-#if defined __CUDA_ARCH__
-__global__ 
+#if 0
+__lobal__ 
 #end
 void cuda_kernel(int *v){
   *v = -1;
