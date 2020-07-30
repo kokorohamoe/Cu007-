@@ -46,6 +46,7 @@ int main(void){
     cudaDeviceSynchronize();
     cudaMemcpy (&cpu_mem,cuda_mem,N,cudaMemcpyHostToDevice);
     cudaDeviceSynchronize();
+#endif
 
   std::cout <<"cuda="<<cpu_mem<<std::endl;
 #ifdef __CUDA_ARCH__ 
