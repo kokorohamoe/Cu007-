@@ -16,7 +16,8 @@
 #if 0
 def __CUDA_ARCH__ 
 __lobal__ 
-#end
+#endif
+
 void cuda_kernel(int *v){
   *v = -1;
 }
