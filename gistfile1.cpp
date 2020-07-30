@@ -9,7 +9,7 @@
 //nvcc Main.cpp Sub.cu
 //
 
-//fork first , if you can.
+//fork first Please, if you can.
        #include <unistd.h>
        #include <iostream>
        #include <stdio.h>
