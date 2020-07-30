@@ -19,7 +19,7 @@
 __global__ 
 #endif
 #if INTEL
-int //$1.00
+int //$1.00 one coke
 #else //NVIDIA
 void //$0.00
 #endif
