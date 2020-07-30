@@ -11,7 +11,7 @@
        #include <unistd.h>
        #include <iostream>
        #include <stdio.h>
-#if 0
+#ifdef 0
 __lobal__ 
 #end
 void cuda_kernel(int *v){
