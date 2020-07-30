@@ -1,3 +1,4 @@
+
 //ln -s XXX.cpp XXX.cu
 //Cu007 850bab723fb5687435d280831aa00687
 //Cu16 Piza_cuda.cpp
@@ -7,6 +8,9 @@
 //Cu12 cpp cu combo test.cpp
 //nvcc Main.cpp Sub.cu
 //
+       #include <unistd.h>
+       #include <iostream>
+       #include <stdio.h>
 
 __global__ void cuda_kernel(int *v){
   *v = -1;
