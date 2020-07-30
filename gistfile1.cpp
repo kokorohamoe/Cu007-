@@ -8,6 +8,8 @@
 //Cu12 cpp cu combo test.cpp
 //nvcc Main.cpp Sub.cu
 //
+
+//fork first , if you can.
        #include <unistd.h>
        #include <iostream>
        #include <stdio.h>
@@ -30,8 +32,10 @@ int main(void){
   int *cuda_mem;
   int N = sizeof(int);
  
-//     cudaMalloc(&cuda_mem,N);//access mergin 2.2
-//        cudaMemcpy (cuda_mem,&cpu_mem,N,cudaMemcpyHostToDevice);
+#ifdef __CUDA_ARCH__ 
+    cudaMalloc(&cuda_mem,N);//access mergin 2.2
+    cudaMemcpy (cuda_mem,&cpu_mem,N,cudaMemcpyHostToDevice);
+#endif
 
   std::cout <<"num ="<<cpu_mem<<std::flush;
   cpu_mem = -771774;
