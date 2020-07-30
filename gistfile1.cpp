@@ -6,7 +6,7 @@ __global__ void cuda_kernel(int *v){
   *v = -1;
 }
 void main(void){
-  int cpu_mem=-1;
+  int cpu_mem=-774;
   int *cuda_mem;
   int N = sizeof(int);
   
