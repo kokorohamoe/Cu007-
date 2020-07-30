@@ -13,9 +13,8 @@
        #include <stdio.h>
 
 
-#if 0
-def __CUDA_ARCH__ 
-__lobal__ 
+#ifdef __CUDA_ARCH__ 
+__global__ 
 #endif
 
 void cuda_kernel(int *v){
