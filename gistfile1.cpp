@@ -36,12 +36,16 @@ int main(void){
     cudaMalloc(&cuda_mem,N);//access mergin 2.2
     cudaMemcpy (cuda_mem,&cpu_mem,N,cudaMemcpyHostToDevice);
 #endif
+    std::cout <<"num ="<<cpu_mem<<std::flush;
 
-  std::cout <<"num ="<<cpu_mem<<std::flush;
-  cpu_mem = -771774;
-  //cuda_kernel<<<1,1>>>(cuda_mem);
-//    cudaDeviceSynchronize();
- //cudaMemcpy (&cpu_mem,cuda_mem,N,cudaMemcpyHostToDevice);
+
+    cpu_mem = -771774;
+#ifdef __CUDA_ARCH__ 
+    cudaDeviceSynchronize();
+    cuda_kernel<<<1,1>>>(cuda_mem);
+    cudaDeviceSynchronize();
+    cudaMemcpy (&cpu_mem,cuda_mem,N,cudaMemcpyHostToDevice);
+    cudaDeviceSynchronize();
 
   std::cout <<"cuda="<<cpu_mem<<std::endl;
 #ifdef __CUDA_ARCH__ 
