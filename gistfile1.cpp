@@ -44,8 +44,8 @@ std::cout <<"CUDA OK"<<std::endl;
     cpu_mem = -771774;
 #ifdef __CUDA_ARCH__ 
     cudaDeviceSynchronize();
-    cuda_kernel<<<1,1>>>(cuda_mem);
-    my_cudaDeviceSynchronize();
+    my_cuda_kernel<<<1,1>>>(cuda_mem);
+    cudaDeviceSynchronize();
     cudaMemcpy (&cpu_mem,cuda_mem,N,cudaMemcpyHostToDevice);
     cudaDeviceSynchronize();
 #endif
