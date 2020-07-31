@@ -8,7 +8,17 @@
 //Cu12 cpp cu combo test.cpp
 //nvcc Main.cpp Sub.cu
 //
-
+/*
+ 850bab723fb5687435d280831aa00687]$ nvcc gistfile1.cu
+In file included from tmpxft_000014db_00000000-5_gistfile1.cudafe1.stub.c:1:0:
+gistfile1.cu: In function ‘void my_cuda_kernel(int*)’:
+gistfile1.cu:26:6: error: redefinition of ‘void my_cuda_kernel(int*)’
+ my_cuda_kernel(int *v){
+      ^~~~~~~~~~~~~~
+gistfile1.cu:26:6: note: ‘void my_cuda_kernel(int*)’ previously defined here
+ my_cuda_kernel(int *v){
+      ^~~~~~~~~~~~~~
+*/
 //fork first Please, if you can.
        #include <unistd.h>
        #include <iostream>
