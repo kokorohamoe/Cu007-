@@ -33,6 +33,8 @@ int main(void){
   int N = sizeof(int);
  
 #ifdef __CUDA_ARCH__ 
+//cudaSuccess, cudaErrorInvalidValue, cudaErrorMemoryAllocation
+std::cout <<"CUDA OK"<<std::endl;
     cudaMalloc(&cuda_mem,N);//access mergin 2.2
     cudaMemcpy (cuda_mem,&cpu_mem,N,cudaMemcpyHostToDevice);
 #endif
