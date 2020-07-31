@@ -23,7 +23,7 @@ int //$1.00 one coke
 #else //NVIDIA
 void //$0.00 this code for nvidia, paiza
 #endif
-cuda_kernel(int *v){
+my_cuda_kernel(int *v){
   *v = -1;
 }
 //void 
@@ -45,7 +45,7 @@ std::cout <<"CUDA OK"<<std::endl;
 #ifdef __CUDA_ARCH__ 
     cudaDeviceSynchronize();
     cuda_kernel<<<1,1>>>(cuda_mem);
-    cudaDeviceSynchronize();
+    my_cudaDeviceSynchronize();
     cudaMemcpy (&cpu_mem,cuda_mem,N,cudaMemcpyHostToDevice);
     cudaDeviceSynchronize();
 #endif
